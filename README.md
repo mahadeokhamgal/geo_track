@@ -117,8 +117,8 @@ Possible future improvements:
     6. Mobile companion tracking app
 ==============================================================================================================================
 Open questions - 
-Q.1. Rendering for table row fails if click/routerLink applied in button in template.
-Q.2. Without Signal the onChanges/updated state of timelines doesn't reflect in child compoenent.
+Q.1. Rendering for table row fails if click/routerLink applied in button in template. - feature-bug/v1
+Q.2. Without Signal the onChanges/updated state of timelines doesn't reflect in child compoenent. - feature-bug/v1
 
 ## Steps followed
 1. Clarify requirements.
