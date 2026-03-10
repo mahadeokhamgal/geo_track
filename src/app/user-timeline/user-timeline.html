@@ -1,5 +1,7 @@
-<h1>{{userId}} in usertimeline</h1>
+<h1>{{ userId }} in usertimeline</h1>
 
-@for(location of timeline; track location.id) {
-    <p>{{location.latitude}}, {{location.longitude}} at {{location.timestamp}}</p>
+@for(location of timeline(); track location.id) {
+  <p>{{location.latitude}}, {{location.longitude}} at {{location.timestamp}}</p>
 }
+
+<app-map [timeline]="timeline()"></app-map>
