@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.userID }}</td>
+            <td>{{ user.name }}</td>
+            <td><button>View</button></td> <!--(click)="navigateToUser(user.userID)" or [routerLink]="['/user', user.userID]" causes table data roes not rendering issue>-->
+        </tr>
+    </tbody>
+</table>
