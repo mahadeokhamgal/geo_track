@@ -7,10 +7,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let user of users">
+        @for(user of users; track user.userID) {
+        <tr>
             <td>{{ user.userID }}</td>
             <td>{{ user.name }}</td>
-            <td><button>View</button></td> <!--(click)="navigateToUser(user.userID)" or [routerLink]="['/user', user.userID]" causes table data roes not rendering issue>-->
+            <td><button>View</button></td><!--(click)="navigateToUser(user.userID)" or [routerLink]="['/user', user.userID]" causes table data roes not rendering issue>-->
         </tr>
+        }
     </tbody>
 </table>

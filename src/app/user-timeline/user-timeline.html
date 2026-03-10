@@ -1,1 +1,5 @@
-<p>user-timeline works!</p>
+<h1>{{userId}} in usertimeline</h1>
+
+@for(location of timeline; track location.id) {
+    <p>{{location.latitude}}, {{location.longitude}} at {{location.timestamp}}</p>
+}

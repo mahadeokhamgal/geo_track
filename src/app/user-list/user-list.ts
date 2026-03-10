@@ -3,7 +3,7 @@ import { Api } from '../api';
 import { User } from '../user';
 import { USERS_URL } from '../const/urls';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'user-list',
@@ -14,7 +14,7 @@ import { Router, RouterModule } from '@angular/router';
 export class UserList {
   public users: User[] = [];
 
-  constructor(private api: Api, private router: Router) {}
+  constructor(private api: Api) {}
 
   ngOnInit() {
     this.getUsers();
@@ -25,10 +25,5 @@ export class UserList {
       this.users = users;
       console.log("users", this.users);
     });
-  }
-
-  navigateToUser(id: string) {
-    console.log("navigate to user", id);
-    // this.router.navigate(['/user', id]);
   }
 }
