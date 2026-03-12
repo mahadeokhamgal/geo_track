@@ -44,8 +44,7 @@
       - The system should support location lookup using the following parameters:
         Search inputs:
             1. User ID
-            2. Date
-            3. Time
+            2. Time stamp
         Expected result:
             Display the exact location of the user at that timestamp.
             If an exact match is unavailable:

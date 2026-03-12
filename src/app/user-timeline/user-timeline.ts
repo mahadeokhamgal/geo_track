@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
 import { LocationTimeline } from '../location-timeline';
@@ -20,12 +20,17 @@ import { Map } from '../map/map';
 export class UserTimeline {
 
   public userId: string = '';
-  public user$: Observable<User>;
+  public user$: Observable<User|undefined>;
   public timeline$: Observable<LocationTimeline[] | undefined>;
 
   constructor(private api: Api, private route: ActivatedRoute) {
     this.userId = this.route.snapshot.paramMap.get('id') || '';
-    this.user$ = this.api.getData<User>(`${USERS_URL}/${this.userId}`);
-    this.timeline$ = this.user$.pipe(map(u => u.timeline));
+    this.user$ = from(this.getUser());
+    this.timeline$ = this.user$.pipe(map(u => u?.timeline));
+  }
+
+  async getUser(): Promise<User | undefined> {
+    const users = await this.api.getData<User[]>(USERS_URL).toPromise();
+    return users?.find(u => u.id === this.userId);
   }
 }
