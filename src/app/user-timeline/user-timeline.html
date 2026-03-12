@@ -1,7 +1,35 @@
-<h1>{{ userId }} in usertimeline</h1>
+<div class="timeline-page">
+    <div class="page-header">
+      <h2 class="user-title">
+        {{ (user$ | async)?.name }}
+        <span class="subtitle">Location Timeline</span>
+      </h2>
+    </div>
+   <div class="timeline-layout">
+   <!-- Timeline Sidebar -->
+      <div class="timeline-list">
+    @for(location of (timeline$ | async); track location.id) {
+      <div class="timeline-item">
 
-@for(location of timeline(); track location.id) {
-  <p>{{location.latitude}}, {{location.longitude}} at {{location.timestamp}}</p>
-}
+        <div class="time">
+          🕒 {{ location.timestamp | date:'medium' }}
+        </div>
 
-<app-map [timeline]="timeline()"></app-map>
+        <div class="location">
+          📍 {{ location.latitude }}, {{ location.longitude }}
+        </div>
+
+      </div>
+    }
+      </div>
+
+<!-- Map -->
+    <div class="map-container">
+      <app-map
+        [timeline]="(timeline$ | async) || []"
+        [name]="(user$ | async)?.name">
+      </app-map>
+    </div>
+  </div>
+</div>
+

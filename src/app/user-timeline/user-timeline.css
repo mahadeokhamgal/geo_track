@@ -1,0 +1,68 @@
+.timeline-page{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* user heading */
+.page-header{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.user-title{
+  font-size:22px;
+  font-weight:600;
+  color:#333;
+}
+
+.subtitle{
+  display:block;
+  font-size:14px;
+  color:#777;
+  margin-top:4px;
+}
+
+/* layout */
+.timeline-layout{
+  display:grid;
+  grid-template-columns: 350px 1fr;
+  gap:20px;
+}
+
+/* timeline card */
+.timeline-list{
+  background:white;
+  border-radius:10px;
+  padding:15px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.08);
+  max-height:500px;
+  overflow-y:auto;
+}
+
+.timeline-item{
+  padding:10px;
+  border-bottom:1px solid #eee;
+}
+
+.timeline-item:last-child{
+  border-bottom:none;
+}
+
+.time{
+  font-size:13px;
+  color:#666;
+}
+
+.location{
+  font-size:14px;
+  color:#4a3aff;
+}
+
+/* map */
+.map-container{
+  height:500px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}

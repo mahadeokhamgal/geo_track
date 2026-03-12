@@ -3,8 +3,24 @@
 @import 'tailwindcss';
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #4a3aff;
+  margin-bottom: 30px;
+}
+.timeline-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
 }

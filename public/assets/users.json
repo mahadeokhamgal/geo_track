@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "timeline": [
+        { "id": "1", "latitude": "18.5004", "longitude": "73.8567", "timestamp": "2026-03-09T08:00:00" },
+        { "id": "2", "latitude": "18.5030", "longitude": "73.8580", "timestamp": "2026-03-09T09:00:00" },
+        { "id": "3", "latitude": "18.5072", "longitude": "73.8603", "timestamp": "2026-03-09T10:30:00" },
+        { "id": "4", "latitude": "18.5108", "longitude": "73.8624", "timestamp": "2026-03-09T12:30:00" },
+        { "id": "5", "latitude": "18.5160", "longitude": "73.8639", "timestamp": "2026-03-09T14:45:00" },
+        { "id": "6", "latitude": "18.5202", "longitude": "73.8655", "timestamp": "2026-03-09T16:20:00" }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Alice Johnson",
+      "timeline": [
+        { "id": "1", "latitude": "19.0760", "longitude": "72.8777", "timestamp": "2026-03-10T08:15:00" },
+        { "id": "2", "latitude": "19.0781", "longitude": "72.8802", "timestamp": "2026-03-10T09:50:00" },
+        { "id": "3", "latitude": "19.0805", "longitude": "72.8830", "timestamp": "2026-03-10T11:10:00" },
+        { "id": "4", "latitude": "19.0820", "longitude": "72.8865", "timestamp": "2026-03-10T13:20:00" },
+        { "id": "5", "latitude": "19.0842", "longitude": "72.8890", "timestamp": "2026-03-10T15:40:00" },
+        { "id": "6", "latitude": "19.0871", "longitude": "72.8913", "timestamp": "2026-03-10T18:05:00" }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Rahul Sharma",
+      "timeline": [
+        { "id": "1", "latitude": "28.6139", "longitude": "77.2090", "timestamp": "2026-03-07T07:30:00" },
+        { "id": "2", "latitude": "28.6172", "longitude": "77.2135", "timestamp": "2026-03-07T09:15:00" },
+        { "id": "3", "latitude": "28.6201", "longitude": "77.2182", "timestamp": "2026-03-07T11:40:00" },
+        { "id": "4", "latitude": "28.6225", "longitude": "77.2229", "timestamp": "2026-03-07T13:10:00" },
+        { "id": "5", "latitude": "28.6253", "longitude": "77.2271", "timestamp": "2026-03-07T15:35:00" },
+        { "id": "6", "latitude": "28.6280", "longitude": "77.2314", "timestamp": "2026-03-07T18:20:00" }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Priya Patel",
+      "timeline": [
+        { "id": "1", "latitude": "22.5726", "longitude": "88.3639", "timestamp": "2026-03-08T08:00:00" },
+        { "id": "2", "latitude": "22.5751", "longitude": "88.3668", "timestamp": "2026-03-08T10:15:00" },
+        { "id": "3", "latitude": "22.5784", "longitude": "88.3702", "timestamp": "2026-03-08T12:00:00" },
+        { "id": "4", "latitude": "22.5816", "longitude": "88.3730", "timestamp": "2026-03-08T14:30:00" },
+        { "id": "5", "latitude": "22.5850", "longitude": "88.3765", "timestamp": "2026-03-08T16:50:00" }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Arjun Singh",
+      "timeline": [
+        { "id": "1", "latitude": "12.9716", "longitude": "77.5946", "timestamp": "2026-03-11T07:40:00" },
+        { "id": "2", "latitude": "12.9743", "longitude": "77.5980", "timestamp": "2026-03-11T09:05:00" },
+        { "id": "3", "latitude": "12.9775", "longitude": "77.6021", "timestamp": "2026-03-11T11:20:00" },
+        { "id": "4", "latitude": "12.9809", "longitude": "77.6065", "timestamp": "2026-03-11T13:45:00" },
+        { "id": "5", "latitude": "12.9840", "longitude": "77.6102", "timestamp": "2026-03-11T16:10:00" },
+        { "id": "6", "latitude": "12.9881", "longitude": "77.6148", "timestamp": "2026-03-11T18:25:00" }
+      ]
+    }
+  ]
+}

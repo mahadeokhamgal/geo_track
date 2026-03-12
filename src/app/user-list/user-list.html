@@ -7,11 +7,11 @@
         </tr>
     </thead>
     <tbody>
-        @for(user of users; track user.userID) {
+        @for(user of users$ | async; track user.id) {
         <tr>
-            <td>{{ user.userID }}</td>
+            <td>{{ user.id }}</td>
             <td>{{ user.name }}</td>
-            <td><button>View</button></td><!--(click)="navigateToUser(user.userID)" or [routerLink]="['/user', user.userID]" causes table data roes not rendering issue>-->
+            <td><button [routerLink]="['/user', user.id]">View</button></td><!--(click)="navigateToUser(user.id)" or [routerLink]="['/user', user.id]" causes table data rows not rendering issue-->
         </tr>
         }
     </tbody>
