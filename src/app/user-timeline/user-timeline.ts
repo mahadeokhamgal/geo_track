@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LocationTimeline } from '../location-timeline';
 import { Api } from '../api';
 import { USERS_URL } from '../const/urls';
@@ -23,14 +23,15 @@ export class UserTimeline {
   public user$: Observable<User|undefined>;
   public timeline$: Observable<LocationTimeline[] | undefined>;
 
-  constructor(private api: Api, private route: ActivatedRoute) {
+  constructor(private api: Api, private route: ActivatedRoute, private router: Router) {
     this.userId = this.route.snapshot.paramMap.get('id') || '';
-    this.user$ = from(this.getUser());
+    this.user$ = this.api.getData<User[]>(USERS_URL).pipe(
+      map(users => users?.find(u => u.id === this.userId))
+    );
     this.timeline$ = this.user$.pipe(map(u => u?.timeline));
   }
 
-  async getUser(): Promise<User | undefined> {
-    const users = await this.api.getData<User[]>(USERS_URL).toPromise();
-    return users?.find(u => u.id === this.userId);
+  navigateToUserList() {
+    this.router.navigate(['/users']);
   }
 }

@@ -1,5 +1,6 @@
 <div class="timeline-page">
     <div class="page-header">
+      <button class="back-button" (click)="navigateToUserList()">Back to User List</button>
       <h2 class="user-title">
         {{ (user$ | async)?.name }}
         <span class="subtitle">Location Timeline</span>
